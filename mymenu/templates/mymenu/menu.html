@@ -1,0 +1,18 @@
+{% load tree_menu_tags %}
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+
+</head>
+<body>
+<h1>Tree structure of toys</h1>
+<img src="{% static "img/Kids-Toys.jpg" %}" alt="Toys" >
+<h2>{% comment %} Toys {% endcomment %}
+{% draw_menu 'main_menu' %}</h2>
+
+
+</body>
+</html>

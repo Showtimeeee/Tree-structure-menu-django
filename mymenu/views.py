@@ -13,5 +13,5 @@ def index(request):
 
 
 def post_detail(request, name):
-    menu_item = MenuItem.objects.filter(name=name).first()
-    return render(request, 'mymenu/detail.html', {'menu_item': menu_item})
+    names = MenuItem.objects.values_list('name', flat=True)
+    return render(request, 'mymenu/detail.html', {'menu_item': names, 'name': name})
